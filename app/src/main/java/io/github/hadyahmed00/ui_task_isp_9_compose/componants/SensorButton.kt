@@ -2,7 +2,6 @@ package io.github.hadyahmed00.ui_task_isp_9_compose.componants
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -24,14 +23,14 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import io.github.hadyahmed00.ui_task_isp_9_compose.R
-import io.github.hadyahmed00.ui_task_isp_9_compose.ui.theme.DarkBlue
-import io.github.hadyahmed00.ui_task_isp_9_compose.ui.theme.Pink
+import io.github.hadyahmed00.ui_task_isp_9_compose.ui.theme.BabyBlue
 
 
 @Composable
 fun SensorButton(
     modifier : Modifier = Modifier,
     text: String,
+    icon : Int,
     onClick: () -> Unit
 ) {
     Button(
@@ -41,7 +40,7 @@ fun SensorButton(
             .then(modifier),
         shape = RoundedCornerShape(20.dp),
         colors = ButtonDefaults.filledTonalButtonColors(
-            containerColor = Pink,
+            containerColor = BabyBlue,
         )
     ) {
         Box(
@@ -49,7 +48,7 @@ fun SensorButton(
                 .fillMaxWidth()
         ) {
             Icon(
-                painter = painterResource(id = R.drawable.ic_sensors),
+                painter = painterResource(id = icon),
                 contentDescription = "sensors icon",
                 tint = Color.White,
                 modifier = Modifier
@@ -94,7 +93,7 @@ fun showSensor() {
         modifier = Modifier
             .fillMaxSize()
     ){
-        SensorButton(text = "Sensors", onClick = {})
+//        SensorButton(text = "Sensors", onClick = {})
     }
 
 }

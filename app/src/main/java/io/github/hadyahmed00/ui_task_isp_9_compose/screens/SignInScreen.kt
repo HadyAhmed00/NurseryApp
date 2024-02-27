@@ -24,7 +24,6 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.navigation.NavHostController
 import com.ramcosta.composedestinations.annotation.Destination
 import com.ramcosta.composedestinations.navigation.DestinationsNavigator
 import io.github.hadyahmed00.ui_task_isp_9_compose.R
@@ -32,10 +31,8 @@ import io.github.hadyahmed00.ui_task_isp_9_compose.componants.CheckBox
 import io.github.hadyahmed00.ui_task_isp_9_compose.componants.InputText
 import io.github.hadyahmed00.ui_task_isp_9_compose.componants.MainButton
 import io.github.hadyahmed00.ui_task_isp_9_compose.screens.destinations.HomeScreenDestination
-import io.github.hadyahmed00.ui_task_isp_9_compose.screens.destinations.SignInScreenDestination
-import io.github.hadyahmed00.ui_task_isp_9_compose.screens.destinations.SingUpScreenDestination
-import io.github.hadyahmed00.ui_task_isp_9_compose.ui.theme.DarkBlue
-import io.github.hadyahmed00.ui_task_isp_9_compose.ui.theme.Pink
+import io.github.hadyahmed00.ui_task_isp_9_compose.ui.theme.AppWhite
+import io.github.hadyahmed00.ui_task_isp_9_compose.ui.theme.BabyBlue
 
 @Destination(start = true)
 @Composable
@@ -44,7 +41,7 @@ fun SignInScreen(navigator: DestinationsNavigator) {
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .background(color = DarkBlue),
+            .background(color = AppWhite),
         verticalArrangement = Arrangement.Center,
 
 
@@ -65,7 +62,7 @@ fun SignInScreen(navigator: DestinationsNavigator) {
                 .padding(15.dp),
             fontWeight = FontWeight.ExtraBold,
             fontSize = 30.sp,
-            color = Color.White
+            color = Color.Gray
         )
         Spacer(
             modifier = Modifier
@@ -82,7 +79,7 @@ fun SignInScreen(navigator: DestinationsNavigator) {
                 Icon(
                     painter = painterResource(id = R.drawable.ic_mail_fill),
                     contentDescription = "Email",
-                    tint = Color.White
+                    tint = BabyBlue
                 )
             },
             myKeyboardType = KeyboardType.Email
@@ -102,7 +99,7 @@ fun SignInScreen(navigator: DestinationsNavigator) {
                 Icon(
                     painter = painterResource(id = R.drawable.ic_lock_fill),
                     contentDescription = "Password",
-                    tint = Color.White
+                    tint = BabyBlue
                 )
             },
             myKeyboardType = KeyboardType.Password,
@@ -113,7 +110,7 @@ fun SignInScreen(navigator: DestinationsNavigator) {
                         Icon(
                             painter = painterResource(id = R.drawable.ic_show_password),
                             contentDescription = "showPassword",
-                            tint = Color.White
+                            tint = BabyBlue
                         )
 
                     }
@@ -123,7 +120,7 @@ fun SignInScreen(navigator: DestinationsNavigator) {
                         Icon(
                             painter = painterResource(id = R.drawable.ic_hide_password),
                             contentDescription = "hidePassword",
-                            tint = Color.White
+                            tint = BabyBlue
                         )
 
                     }
@@ -140,7 +137,7 @@ fun SignInScreen(navigator: DestinationsNavigator) {
                     .padding(10.dp),
                 fontWeight = FontWeight.ExtraBold,
                 fontSize = 15.sp,
-                color = Pink,
+                color = BabyBlue,
                 textAlign = TextAlign.End
             )
         }
@@ -154,7 +151,7 @@ fun SignInScreen(navigator: DestinationsNavigator) {
                 .padding(10.dp),
             fontWeight = FontWeight.ExtraBold,
             fontSize = 15.sp,
-            color = Color.White,
+            color = Color.Gray,
             textAlign = TextAlign.Center
         )
 
@@ -167,21 +164,21 @@ fun SignInScreen(navigator: DestinationsNavigator) {
                 Icon(
                     painter = painterResource(id = R.drawable.ic_facebook),
                     contentDescription = "Facebook",
-                    tint = Pink
+                    tint = BabyBlue
                 )
             }
             IconButton(onClick = { /*TODO*/ }) {
                 Icon(
                     painter = painterResource(id = R.drawable.ic_google),
                     contentDescription = "Google",
-                    tint = Pink
+                    tint = BabyBlue
                 )
             }
             IconButton(onClick = { /*TODO*/ }) {
                 Icon(
                     painter = painterResource(id = R.drawable.ic_twitterx),
                     contentDescription = "Twitter",
-                    tint = Pink
+                    tint = BabyBlue
                 )
             }
         }
@@ -194,13 +191,13 @@ fun SignInScreen(navigator: DestinationsNavigator) {
         ) {
             Text(
                 text = "Don't have an account?",
-                color = Color.White,
+                color = Color.Gray,
                 fontWeight = FontWeight.Bold,
                 fontSize = 15.sp
             )
             Text(
                 text = " Sign Up",
-                color = Pink,
+                color = BabyBlue,
                 fontWeight = FontWeight.Bold,
                 fontSize = 15.sp
             )

@@ -13,12 +13,13 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.unit.dp
-import io.github.hadyahmed00.ui_task_isp_9_compose.ui.theme.DarkBlue
-import io.github.hadyahmed00.ui_task_isp_9_compose.ui.theme.Pink
+import io.github.hadyahmed00.ui_task_isp_9_compose.ui.theme.AppWhite
+import io.github.hadyahmed00.ui_task_isp_9_compose.ui.theme.BabyBlue
 import io.github.hadyahmed00.ui_task_isp_9_compose.ui.theme.gray
 import io.github.hadyahmed00.ui_task_isp_9_compose.ui.theme.white
 
@@ -42,7 +43,7 @@ fun InputText(
         onValueChange = onTextChange,
         label = { Text(text = mylabel) },
         modifier = Modifier
-            .background(color = DarkBlue)
+            .background(color = AppWhite)
             .padding(10.dp)
             .then(modifier),
         singleLine = true,
@@ -50,14 +51,14 @@ fun InputText(
         keyboardOptions = KeyboardOptions().copy(keyboardType = myKeyboardType),
         shape = RoundedCornerShape(51.dp),
         colors = OutlinedTextFieldDefaults.colors(
-            unfocusedBorderColor = Pink,
-            focusedBorderColor = Pink,
-            cursorColor = Pink,
+            unfocusedBorderColor = BabyBlue,
+            focusedBorderColor = BabyBlue,
+            cursorColor = BabyBlue,
             unfocusedLabelColor = gray,
             focusedLabelColor = gray,
             unfocusedLeadingIconColor = gray,
             focusedLeadingIconColor = gray,
-            focusedTextColor = white,
+            focusedTextColor = Color.Gray,
             unfocusedTextColor = gray,
         ),
         visualTransformation = if (isPassword && !showPassword.value) {

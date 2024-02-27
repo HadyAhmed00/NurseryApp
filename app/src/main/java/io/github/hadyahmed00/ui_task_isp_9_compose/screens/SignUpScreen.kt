@@ -22,7 +22,6 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.navigation.NavHostController
 import com.ramcosta.composedestinations.annotation.Destination
 import com.ramcosta.composedestinations.navigation.DestinationsNavigator
 import io.github.hadyahmed00.ui_task_isp_9_compose.R
@@ -30,9 +29,8 @@ import io.github.hadyahmed00.ui_task_isp_9_compose.componants.CheckBox
 import io.github.hadyahmed00.ui_task_isp_9_compose.componants.InputText
 import io.github.hadyahmed00.ui_task_isp_9_compose.componants.MainButton
 import io.github.hadyahmed00.ui_task_isp_9_compose.screens.destinations.SignInScreenDestination
-import io.github.hadyahmed00.ui_task_isp_9_compose.screens.destinations.SingUpScreenDestination
-import io.github.hadyahmed00.ui_task_isp_9_compose.ui.theme.DarkBlue
-import io.github.hadyahmed00.ui_task_isp_9_compose.ui.theme.Pink
+import io.github.hadyahmed00.ui_task_isp_9_compose.ui.theme.AppWhite
+import io.github.hadyahmed00.ui_task_isp_9_compose.ui.theme.BabyBlue
 import io.github.hadyahmed00.ui_task_isp_9_compose.ui.theme.white
 
 @Destination
@@ -42,7 +40,7 @@ fun SingUpScreen( navigator : DestinationsNavigator) {
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .background(color = DarkBlue)
+            .background(color = AppWhite)
     ) {
 
         val fName = remember {
@@ -214,7 +212,7 @@ fun SingUpScreen( navigator : DestinationsNavigator) {
             )
             Text(
                 text = "Privacy",
-                color = Pink,
+                color = BabyBlue,
                 fontWeight = FontWeight.Bold,
                 fontSize = 15.sp
             )
@@ -226,7 +224,7 @@ fun SingUpScreen( navigator : DestinationsNavigator) {
             )
             Text(
                 text = "Policy",
-                color = Pink,
+                color = BabyBlue,
                 fontWeight = FontWeight.Bold,
                 fontSize = 15.sp
             )

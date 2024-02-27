@@ -1,6 +1,5 @@
 package io.github.hadyahmed00.ui_task_isp_9_compose.componants
 
-import android.graphics.fonts.Font
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
@@ -18,8 +17,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import io.github.hadyahmed00.ui_task_isp_9_compose.R
-import io.github.hadyahmed00.ui_task_isp_9_compose.ui.theme.DarkBlue
-import io.github.hadyahmed00.ui_task_isp_9_compose.ui.theme.LightDarkBlue
+import io.github.hadyahmed00.ui_task_isp_9_compose.ui.theme.AppLeghtWhite
 
 @Composable
 fun Hider(
@@ -29,7 +27,7 @@ fun Hider(
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .background(color = LightDarkBlue),
+            .background(color = AppLeghtWhite),
         horizontalArrangement = Arrangement.Center,
         verticalAlignment  = Alignment.CenterVertically
 

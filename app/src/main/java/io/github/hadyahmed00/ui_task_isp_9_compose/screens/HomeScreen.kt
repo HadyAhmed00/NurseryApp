@@ -10,7 +10,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.ramcosta.composedestinations.annotation.Destination
 import com.ramcosta.composedestinations.navigation.DestinationsNavigator
@@ -19,7 +18,7 @@ import io.github.hadyahmed00.ui_task_isp_9_compose.componants.Hider
 import io.github.hadyahmed00.ui_task_isp_9_compose.componants.ReadingPart
 import io.github.hadyahmed00.ui_task_isp_9_compose.componants.SensorButton
 import io.github.hadyahmed00.ui_task_isp_9_compose.screens.destinations.SensorControlScreenDestination
-import io.github.hadyahmed00.ui_task_isp_9_compose.ui.theme.DarkBlue
+import io.github.hadyahmed00.ui_task_isp_9_compose.ui.theme.AppWhite
 
 @Destination
 @Composable
@@ -29,7 +28,7 @@ fun HomeScreen(
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .background(color = DarkBlue)
+            .background(color = AppWhite)
     ) {
 
         Hider(
@@ -50,48 +49,68 @@ fun HomeScreen(
             item {
                 SensorButton(
                     text = "Tmeprature",
+                    icon = R.drawable.ic_temp,
                     modifier = Modifier.padding(10.dp)
                 ) {
-                    navigator.navigate(SensorControlScreenDestination("Temperature"))
+                    navigator.navigate(
+                        SensorControlScreenDestination(
+                            title = "Temperature",
+                            icon = R.drawable.ic_temp,
+                            currentValue = 25f
+                        )
+                    )
                 }
             }
 
             item {
                 SensorButton(
                     text = "Humidity",
+                    icon = R.drawable.ic_humidity,
                     modifier = Modifier.padding(10.dp)
                 ) {
-                    navigator.navigate(SensorControlScreenDestination("Humidity"))
+
+                    navigator.navigate(
+                        SensorControlScreenDestination(
+                            title = "Humidity",
+                            icon = R.drawable.ic_humidity,
+                            currentValue = 50f
+                        )
+                    )
                 }
             }
             item {
                 SensorButton(
-                    text = "Humidity",
+                    text = "Hart Rate",
+                    icon = R.drawable.ic_hart,
                     modifier = Modifier.padding(10.dp)
                 ) {
-                    navigator.navigate(SensorControlScreenDestination("Humidity"))
+                    navigator.navigate(
+                        SensorControlScreenDestination(
+                            title = "Hart Rate",
+                            icon = R.drawable.ic_hart,
+                            currentValue = 80f
+                        )
+                    )
 
                 }
             }
             item {
                 SensorButton(
-                    text = "Humidity",
+                    text = "Oxygen Level",
+                    icon = R.drawable.ic_oxygen,
                     modifier = Modifier.padding(10.dp)
                 ) {
-                    navigator.navigate(SensorControlScreenDestination("Humidity"))
+
+                    navigator.navigate(
+                        SensorControlScreenDestination(
+                            title = "Oxygen Level",
+                            icon = R.drawable.ic_oxygen,
+                            currentValue = 98f
+                        )
+                    )
 
                 }
             }
-            item {
-                SensorButton(
-                    text = "Humidity",
-                    modifier = Modifier.padding(10.dp)
-                ) {
-                    navigator.navigate(SensorControlScreenDestination("Humidity"))
-
-                }
-            }
-
 
         }
 

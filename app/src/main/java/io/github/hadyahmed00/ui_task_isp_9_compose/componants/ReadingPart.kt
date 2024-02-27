@@ -10,10 +10,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import io.github.hadyahmed00.ui_task_isp_9_compose.ui.theme.Pink
+import io.github.hadyahmed00.ui_task_isp_9_compose.ui.theme.BabyBlue
 
 @Composable
 fun ReadingPart() {
@@ -25,7 +24,7 @@ fun ReadingPart() {
         Text(
             text = "Current Readings",
             style = TextStyle(
-                color = Pink,
+                color = BabyBlue,
                 fontSize = 28.sp,
                 fontWeight = FontWeight(1000)
             )
@@ -41,7 +40,7 @@ fun ReadingPart() {
             Text(
                 text = "Temperature",
                 style = TextStyle(
-                    color = Pink,
+                    color = BabyBlue,
                     fontSize = 20.sp,
                     fontWeight = FontWeight(500)
                 )
@@ -50,7 +49,7 @@ fun ReadingPart() {
             Text(
                 text = "25",
                 style = TextStyle(
-                    color = Pink,
+                    color = BabyBlue,
                     fontSize = 20.sp,
                     fontWeight = FontWeight(500)
                 )
@@ -65,7 +64,7 @@ fun ReadingPart() {
             Text(
                 text = "Humidity",
                 style = TextStyle(
-                    color = Pink,
+                    color = BabyBlue,
                     fontSize = 20.sp,
                     fontWeight = FontWeight(500)
                 )
@@ -73,7 +72,7 @@ fun ReadingPart() {
             Text(
                 text = "25",
                 style = TextStyle(
-                    color = Pink,
+                    color = BabyBlue,
                     fontSize = 20.sp,
                     fontWeight = FontWeight(500)
                 )
@@ -88,7 +87,7 @@ fun ReadingPart() {
             Text(
                 text = "Pressure",
                 style = TextStyle(
-                    color = Pink,
+                    color = BabyBlue,
                     fontSize = 20.sp,
                     fontWeight = FontWeight(500)
                 )
@@ -96,7 +95,7 @@ fun ReadingPart() {
             Text(
                 text = "25",
                 style = TextStyle(
-                    color = Pink,
+                    color = BabyBlue,
                     fontSize = 20.sp,
                     fontWeight = FontWeight(500)
                 )
